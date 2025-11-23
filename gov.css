@@ -79,7 +79,7 @@ p {
     flex-direction: column;
     width: fit-content;
     margin: auto;
-    animation: change 2.2s ease-out forwards;
+    animation: change 3.14159265s linear forwards;
 }
 
 .age-list span {
@@ -101,4 +101,5 @@ p {
     text-align: center;
     font-size: 2vw;
 }
+
 
