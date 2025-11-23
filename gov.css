@@ -1,13 +1,12 @@
 * {
-    text-align: center;
     text-wrap: auto;
     background-color: rgb(212, 212, 212);
-    z-index: 1;
 }
 
 html {
     scroll-behavior: smooth;
 }
+
 
 #Main {
     background-color: rgb(212, 212, 212);
@@ -16,17 +15,42 @@ html {
     font-size: 10vw;
 }
 
-#p1 {
-    font-size: 5vw;
+p {
+    font-size: 3vw;
     color: rgb(174, 54, 54);
+    text-align: left;
+    animation: text both;
+    animation-timeline: view(50% 10%);
+}
+
+@keyframes text {
+    from {
+        filter: none;
+        opacity: 0;
+        scale: .95;
+        translate: 0 4rem;
+    }
+    to {
+        filter: none;
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+    }
 }
 
 .photo {
+    height: auto;
+    max-width: 40%;
     animation: reveal both;
     animation-timeline: view(50% 10%);
-    max-width: 50%;
-    height: auto;
-    margin: auto;
+}
+
+.photo-row {
+    display: flex;
+    justify-content: center;   /* centers horizontally */
+    align-items: center;       /* centers vertically */
+    gap: 2vw;                  /* space between images */
+    flex-wrap: wrap;           /* allows wrapping if screen is small */
 }
 
 @keyframes reveal {
@@ -43,30 +67,38 @@ html {
         translate: 0 0;
     }
 }
-
-.age-list {
-    animation: change both;
-    animation-timeline: view(50% 10%);
+#number-changing {
+    overflow: hidden;
+    height: 5vw;
+    width: fit-content;
+    margin: auto;
 }
 
-.age-list::before {
-    content: "Age-18";
-    animation: changeText 5s linear ;
+.age-list {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+    animation: change 2.2s ease-out forwards;
+}
+
+.age-list span {
+    height: 5vw;
+    line-height: 5vw;
+    font-size: 4vw;
+    color: rgb(54, 68, 174);
+    text-align: center;
 }
 
 @keyframes change {
-    0% {
-        content: "Age-18"; 
-    }
-
-    33% {
-        content: "Age-17";
-    }
-
-    66% {
-        content: "Age-16"
-    }
-    100% {
-        content: "Age-15";
-    }
+    0%   { transform: translateY(0); }
+    20%  { transform: translateY(-5vw); }
+    55%  { transform: translateY(-10vw); }
+    100% { transform: translateY(-15vw); }
 }
+
+#idk{
+    text-align: center;
+    font-size: 2vw;
+}
+
