@@ -1,10 +1,10 @@
 * {
     text-wrap: auto;
     background-color: rgb(212, 212, 212);
-}
 
 html {
     scroll-behavior: smooth;
+}
 }
 
 
@@ -12,11 +12,11 @@ html {
     background-color: rgb(212, 212, 212);
     text-align: center;
     color: rgb(25, 15, 170);
-    font-size: 10vw;
+    font-size: 15vw;
 }
 
 p {
-    font-size: 3vw;
+    font-size: 6vw;
     color: rgb(174, 54, 54);
     text-align: left;
     animation: text both;
@@ -69,7 +69,7 @@ p {
 }
 #number-changing {
     overflow: hidden;
-    height: 5vw;
+    height: 7vw;
     width: fit-content;
     margin: auto;
 }
@@ -79,13 +79,13 @@ p {
     flex-direction: column;
     width: fit-content;
     margin: auto;
-    animation: change 3.14159265s linear forwards;
+    animation: change 2.2s ease-out forwards;
 }
 
 .age-list span {
-    height: 5vw;
-    line-height: 5vw;
-    font-size: 4vw;
+    height: 7vw;
+    line-height: 7vw;
+    font-size: 7vw;
     color: rgb(54, 68, 174);
     text-align: center;
 }
@@ -99,7 +99,5 @@ p {
 
 #idk{
     text-align: center;
-    font-size: 2vw;
+    font-size: 3vw;
 }
-
-
